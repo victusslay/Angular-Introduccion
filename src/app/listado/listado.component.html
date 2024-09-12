@@ -1,0 +1,27 @@
+<h1>Listado de barbies</h1>
+
+<div *ngIf="barbieBorrada, else noBorrado">
+    <h3>Barbie Borrada: <small> {{barbieBorrada}}  </small></h3>
+
+</div>
+
+<ng-template #noBorrado>  
+    <h3> No se ha borrado nada </h3>
+
+</ng-template>
+
+    <button (click)="borrarBarbie()"> Borrar </button>
+
+<ul>
+
+    <li *ngFor="let barbie of barbies; let i = index">
+       {{i + 1}} - {{barbie}}
+
+    </li>
+
+</ul>
+
+
+
+
+
